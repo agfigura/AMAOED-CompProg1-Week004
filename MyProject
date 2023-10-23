@@ -1,0 +1,93 @@
+#include <iostream>
+#include <string.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <locale>
+using namespace std;
+
+int main()
+{
+    string name, course;
+    int year;
+    double unit, tuition, down, bal;
+
+    //Student Input
+    cout << "\nStudent Name\t: ";
+    getline(cin, name);
+    cout << "Program/Course\t: ";
+    getline(cin, course);
+    cout << "Year Level\t: ";
+    cin >> year;
+    cout << "No. of Unit\t: ";
+    cin >> unit;
+    cout << endl << "-------------------------------------------------------------------------------" << endl;
+    cout << endl << "\t\tENROLLMENT SLIP" << endl;
+
+    //Condition
+    if(year==1)
+    {
+        tuition = unit * 1500;
+        down = tuition * 0.3;
+        bal = tuition - down;
+
+        //Output
+        cout << "Student Name\t: " << name << endl;
+        cout << "Program/Course\t: " << course << endl;
+        cout << "Year Name\t: " << "Freshman" << endl;
+        cout << "No. of Units\t: " << unit << endl;
+        cout << "Tuition Fee\t: " << tuition << endl;
+        cout << "Down Payment\t: " << down << endl;
+        cout << "Balance\t\t: " << bal << endl;
+    }
+    else if(year==2)
+    {
+        tuition = unit * 1800;
+        down = tuition * 0.3;
+        bal = tuition - down;
+
+        //Output
+        cout << "Student Name\t: " << name << endl;
+        cout << "Program/Course\t: " << course << endl;
+        cout << "Year Name\t: " << "Sophomore" << endl;
+        cout << "No. of Units\t: " << unit << endl;
+        cout << "Tuition Fee\t: " << tuition << endl;
+        cout << "Down Payment\t: " << down << endl;
+        cout << "Balance\t\t: " << bal << endl;
+    }
+    else if(year==3)
+    {
+        tuition = unit * 2000;
+        down = tuition * 0.3;
+        bal = tuition - down;
+
+        //Output
+        cout << "Student Name\t: " << name << endl;
+        cout << "Program/Course\t: " << course << endl;
+        cout << "Year Name\t: " << "Junior" << endl;
+        cout << "No. of Units\t: " << unit << endl;
+        cout << "Tuition Fee\t: " << tuition << endl;
+        cout << "Down Payment\t: " << down << endl;
+        cout << "Balance\t\t: " << bal << endl;
+    }
+    else if(year==4 || year==5)
+    {
+        tuition = unit * 2300;
+        down = tuition * 0.3;
+        bal = tuition - down;
+
+        //Output
+        cout << "Student Name\t: " << name << endl;
+        cout << "Program/Course\t: " << course << endl;
+        cout << "Year Name\t: " << "Senior" << endl;
+        cout << "No. of Units\t: " << unit << endl;
+        cout << "Tuition Fee\t: " << tuition << endl;
+        cout << "Down Payment\t: " << down << endl;
+        cout << "Balance\t\t: " << bal << endl;
+    }
+    else
+    {
+        cout << "Invalid Input!" << endl;
+    }
+
+    return EXIT_SUCCESS;
+}
